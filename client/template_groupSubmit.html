@@ -1,0 +1,82 @@
+<template name="groupSubmit">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!--   <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100"> -->
+                <div class=".col-xs-12 .col-md-8">
+                  {{#if currentUser}}
+                        <form class="form-horizontal" action="" method="post">
+                            <fieldset>
+                                <legend class="text-center">Submit Group</legend>
+                                <!-- Name input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="name">Name</label>
+                                    <div class="col-md-9">
+                                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Website input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="website">Your Website</label>
+                                    <div class="col-md-9">
+                                        <input id="website" name="website" type="text" placeholder="http://yourwebsite.com" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Email input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                                    <div class="col-md-9">
+                                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Twitter input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="twitter">Your Twitter</label>
+                                    <div class="col-md-9">
+                                        <input id="twitter" name="twitter" type="url" placeholder="http://twitter.com/yourTwitter" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Facebook input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="facebook">Your Facebook</label>
+                                    <div class="col-md-9">
+                                        <input id="facebook" name="facebook" type="url" placeholder="http://facebook.com/yourFacebook" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Instagram input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="instagram">Your Instagram</label>
+                                    <div class="col-md-9">
+                                        <input id="instagram" name="instagram" type="url" placeholder="http://instagram.com/yourInstagram" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- tags input -->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="tags">Your tags</label>
+                                    <div class="col-md-9">
+                                        <input id="tags" name="tags" type="text" placeholder="tags, go, here" class="form-control" data-role="tagsinput">
+                                    </div>
+                                </div>
+                                <!-- Message body -->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="info">Your Mission</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" id="info" name="info" placeholder="Please enter your mission here..." rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12 text-right">
+                                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                  {{else}}
+                  <h3>You need to log in to create a group!</h3>
+                  {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

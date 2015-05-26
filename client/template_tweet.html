@@ -1,0 +1,64 @@
+<template name="tweetSubmit">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!--   <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100"> -->
+                <div class=".col-xs-12 .col-md-8">
+                    {{#if currentUser}}
+                    <form class="form-horizontal tweetAPI" action="" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">consumer key</label>
+                                <div class="col-md-9">
+                                    <input id="ck" name="ck" type="text" placeholder="Your key" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">consumer secret</label>
+                                <div class="col-md-9">
+                                    <input id="cs" name="cs" type="text" placeholder="consumer secret" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">access token</label>
+                                <div class="col-md-9">
+                                    <input id="at" name="at" type="text" placeholder="access token" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">access token secret</label>
+                                <div class="col-md-9">
+                                    <input id="ats" name="ats" type="text" placeholder="access token secret" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit API keys</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <h3>send a tweet</h3>
+                    <form class="form-horizontal sendTweet" action="" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="info">Your Tweet</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control" id="tweet" name="tweet" placeholder="Please enter your tweet here..." rows="5"></textarea>
+                                </div>
+                            </div>
+                            <!-- Form actions -->
+                            <div class="form-group">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    {{else}}
+                    <h3 class="align-center">You need to log in to send a tweet!</h3> {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

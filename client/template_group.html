@@ -1,0 +1,42 @@
+<template name="group">
+<article class="group">
+    <div class=".col-xs-12 .col-md-8">
+        {{#if isOwner}}
+        <button class="delete">&times;</button> {{/if}}
+        <a href="{{pathFor 'groupPage'}}"><h2 class="text-right">{{name}}</h2></a>
+        <p><a href="{{website}}" target="_blank">{{website}}</a></p>
+        <p>
+            {{info}}
+        </p>
+        <p class="pull-right">
+            {{tags}}
+        </p>
+        <hr />
+        <div class="social">
+                
+                {{#if hasFacebook}}
+                <a target="_blank" href="{{facebook}}"><span class="fa fa-facebook "></span></a>
+                <span class="separator">|</span>
+                {{/if}}
+                
+                {{#if hasTwitter}} 
+                <a target="_blank" href="{{twitter}}"><span class="fa fa-twitter"></span></a>
+                <span class="separator">|</span> 
+                {{/if}} 
+                
+                {{#if hasInstagram}}
+                <a target="_blank" href="{{instagram}}"><span class="fa fa-instagram"></span></a>
+                <span class="separator">|</span> 
+                {{/if}} 
+                
+                {{#if hasEmail}}
+                <a href="mailto:{{email}}"><span class="fa fa-envelope-o"></span></a>
+                {{/if}}
+
+        </div>
+    </div>
+    </article>
+</template>
+
+
+
